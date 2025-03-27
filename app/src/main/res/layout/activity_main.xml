@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Header -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Biblioteca Digital"
+            android:textColor="#3F51B5"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Registro de libros -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#FFFFFF"
+            android:padding="16dp"
+            android:elevation="4dp"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Registrar Libro"
+                android:textColor="#303F9F"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp"/>
+
+            <EditText
+                android:id="@+id/etTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Título"
+                android:textColorHint="#BDBDBD"
+                android:backgroundTint="#3F51B5"
+                android:layout_marginBottom="8dp"/>
+
+            <EditText
+                android:id="@+id/etAuthor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Autor"
+                android:textColorHint="#BDBDBD"
+                android:backgroundTint="#3F51B5"
+                android:layout_marginBottom="8dp"/>
+
+            <EditText
+                android:id="@+id/etIsbn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="ISBN"
+                android:inputType="number"
+                android:textColorHint="#BDBDBD"
+                android:backgroundTint="#3F51B5"
+                android:layout_marginBottom="16dp"/>
+
+            <Button
+                android:id="@+id/btnAddBook"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Agregar Libro"
+                android:backgroundTint="#3F51B5"
+                android:textColor="#FFFFFF"/>
+        </LinearLayout>
+
+        <!-- Búsqueda -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#FFFFFF"
+            android:padding="16dp"
+            android:elevation="4dp"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Buscar Libros"
+                android:textColor="#303F9F"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp"/>
+
+            <EditText
+                android:id="@+id/etSearch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Buscar por título o autor"
+                android:textColorHint="#BDBDBD"
+                android:backgroundTint="#3F51B5"
+                android:layout_marginBottom="8dp"/>
+
+            <Button
+                android:id="@+id/btnSearch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Buscar"
+                android:backgroundTint="#FF5722"
+                android:textColor="#FFFFFF"/>
+        </LinearLayout>
+
+        <!-- Listado -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#FFFFFF"
+            android:padding="16dp"
+            android:elevation="4dp"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Libros Disponibles"
+                android:textColor="#303F9F"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp"/>
+
+            <ListView
+                android:id="@+id/lvBooks"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:divider="#E0E0E0"
+                android:dividerHeight="1dp"/>
+        </LinearLayout>
+
+        <!-- Préstamos -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#FFFFFF"
+            android:padding="16dp"
+            android:elevation="4dp"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Gestión de Préstamos"
+                android:textColor="#303F9F"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp"/>
+
+            <EditText
+                android:id="@+id/etUserId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="ID de Usuario"
+                android:textColorHint="#BDBDBD"
+                android:backgroundTint="#3F51B5"
+                android:layout_marginBottom="8dp"/>
+
+            <Button
+                android:id="@+id/btnLoan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Prestar Libro"
+                android:backgroundTint="#3F51B5"
+                android:textColor="#FFFFFF"
+                android:layout_marginBottom="8dp"/>
+
+            <Button
+                android:id="@+id/btnReturn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Devolver Libro"
+                android:backgroundTint="#FF5722"
+                android:textColor="#FFFFFF"/>
+        </LinearLayout>
+
+        <!-- Estadísticas -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#FFFFFF"
+            android:padding="16dp"
+            android:elevation="4dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Estadísticas"
+                android:textColor="#303F9F"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp"/>
+
+            <Button
+                android:id="@+id/btnStats"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mostrar Estadísticas"
+                android:backgroundTint="#4CAF50"
+                android:textColor="#FFFFFF"
+                android:layout_marginBottom="8dp"/>
+
+            <TextView
+                android:id="@+id/tvStats"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#757575"
+                android:lineSpacingExtra="4dp"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
